@@ -16,3 +16,15 @@
 # Add a feed source
 #echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
 #echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+
+# 注释掉lienol大diy1源
+#sed -i 's/^\(.*diy1\)/#&/' feeds.conf.default
+
+# 添加xiaorouji大passwall源
+#sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall.git' feeds.conf.default
+
+# 注释掉默认的packages源
+#sed -i 's/^\(.*packages\)/#&/' feeds.conf.default
+
+# 添加修改的packages源
+#sed -i '$a src-git packages https://github.com/lxhao61/openwrt-packages-1.git;21.02' feeds.conf.default
